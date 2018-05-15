@@ -1,0 +1,12 @@
+
+.gitignore
+.idea/inspectionProfiles/
+.idea/workspace.xml
+MockitoDemo/target/
+NioDemo/target/
+SpringDemo/src/test/java/com/demo/springdemo/velocitydemo/
+SpringDemo/src/test/java/com/demo/velocitydemo/
+SpringDemo/target/
+VelocityDemo/src/main/java/com/demo/springdemo/
+VelocityDemo/src/main/java/com/demo/velocitydemo/
+VelocityDemo/target/

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MockitoDemo:war">
+    <output-path>$PROJECT_DIR$/MockitoDemo/target</output-path>
+    <root id="archive" name="MockitoDemo.war">
+      <element id="artifact" artifact-name="MockitoDemo:war exploded" />
+    </root>
+  </artifact>
+</component>
