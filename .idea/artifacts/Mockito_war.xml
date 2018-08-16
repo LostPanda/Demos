@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="Mockito:war">
-    <output-path>$PROJECT_DIR$/Mockito/target</output-path>
-    <root id="archive" name="spring-boot-starter-parent-2.0.0.RELEASE.war">
-      <element id="artifact" artifact-name="Mockito:war exploded" />
-    </root>
-  </artifact>
-</component>

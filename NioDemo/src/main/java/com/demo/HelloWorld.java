@@ -12,7 +12,7 @@ import java.nio.channels.*;
  * @Author wb-hx347246
  * @Date 2018/5/15 16:45
  */
-public class HelloWorld {
+public class HelloWorld extends App{
 
     public static void main(String[] args) throws IOException {
         FileInputStream fis = new FileInputStream("d:/ubuntu-16.04.3-desktop-amd64.iso");

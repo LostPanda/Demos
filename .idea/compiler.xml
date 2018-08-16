@@ -6,20 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Mockito" />
         <module name="MockitoDemo" />
         <module name="NioDemo" />
         <module name="SpringDemo" />
         <module name="VelocityDemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Demos" target="1.7" />
-      <module name="Mockito" target="1.7" />
-      <module name="MockitoDemo" target="1.7" />
-      <module name="NioDemo" target="1.7" />
-      <module name="SpringDemo" target="1.7" />
-      <module name="VelocityDemo" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>
