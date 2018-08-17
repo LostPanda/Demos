@@ -22,6 +22,5 @@ public class SpringMain {
 
         XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
-        xmlBeanFactory.getBean()
     }
 }
