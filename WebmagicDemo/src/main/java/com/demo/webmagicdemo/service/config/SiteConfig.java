@@ -27,7 +27,7 @@ public class SiteConfig {
     public Site lagouSite(List<String> userAngenlist) {
 
         Set<Cookie> login = LagouLoginHelper.generateCookie();
-        Site site = Site.me().setRetryTimes(3).setSleepTime(2000)
+        Site site = Site.me().setRetryTimes(3).setSleepTime(1000)
                 .addHeader("accept", "application/json, text/javascript, */*; q=0.01")
                 .addHeader("Accept-Encoding", "gzip, deflate, br")
                 .addHeader("Accept-language", "zh-CN,zh;q=0.9")
@@ -50,7 +50,7 @@ public class SiteConfig {
                 )*/
                 .addHeader("Origin", "https://www.lagou.com")
                 .addHeader("Host", "www.lagou.com")
-                .addHeader("Referer", "https://www.lagou.com/jobs/list_java?labelWords=&fromSearch=true&suginput=")
+//                .addHeader("Referer", "https://www.lagou.com/jobs/list_java?labelWords=&fromSearch=true&suginput=")
                 .addHeader("User-Agent", userAngenlist.get(RandomUtils.nextInt(0,8)))
                 .addHeader("X-Anit-Forge-Code", "0")
                 .addHeader("X-Anit-Forge-Token", "none")

@@ -23,7 +23,7 @@ public class LagouCrawlerTest {
     public void crawl() {
         try {
             System.out.println("lagousite:"+lagouSite);
-            lagouCrawler.crawl("java",15,"杭州");
+            lagouCrawler.crawl("高级java",150,"杭州");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }

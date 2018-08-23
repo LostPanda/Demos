@@ -1,5 +1,6 @@
 package com.demo.webmagicdemo.service.commnon;
 
+import lombok.extern.java.Log;
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.util.DateUtil;
 import org.jsoup.helper.DataUtil;
@@ -13,6 +14,7 @@ import java.util.Date;
  * @Date 2018/8/22 上午10:18
  */
 @Validated
+@Log
 public class DateUtils {
     private static final String TODAY_TAG=":";
 
@@ -20,17 +22,13 @@ public class DateUtils {
         if(StringUtils.isBlank(date)){
             return null;
         }
-        String manipulateString=date.substring(0,date.indexOf("&"));
-
+        String manipulateString=date.substring(0,date.indexOf(" "));
         if(manipulateString.contains(TODAY_TAG)){
             return DateUtil.now();
-        }else{
-            String c = manipulateString.substring(date.length() - 1);
-            if (Character.isDigit(c.charAt(0))) {
-                return org.apache.commons.lang3.time.DateUtils.addDays(DateUtil.now(),2);
-            } else {
-                return org.apache.http.client.utils.DateUtils.parseDate(date);
-            }
+        }else if(manipulateString.contains("-")){
+            return DateUtil.parse(date);
+        }else {
+            return org.apache.commons.lang3.time.DateUtils.addDays(DateUtil.now(),-Integer.valueOf(manipulateString.substring(0,1)));
         }
 
 

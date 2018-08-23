@@ -26,32 +26,30 @@ import java.util.Date;
 public class LagouProcessor implements PageProcessor {
     private static final String JOB_URL_PREFIEX = "https://www.lagou.com/jobs/";
     private static final String JOB_URL_POSTFIEX = ".html";
+    private static final String JD_BLANK="[]";
 
     @Resource
     private Site lagouSite;
 
     @Override
     public void process(Page page) {
-        log.info("process exeu");
+        log.info("start prcess page:"+page.getUrl());
         ArrayList<String> urls = null;
         try {
             findJobDetailUrl(page);
+            log.info("main page");
         } catch (Exception e) {
-            log.info("not main page");
+            log.info("It's a job page:"+page.getUrl());
         }
         String jd = page.getHtml().xpath("//dd[@class='job_bt']/div/p/text()").all().toString();
         String salary = page.getHtml().xpath("//span[@class='salary']/text()").toString();
         String jobName = page.getHtml().xpath("//span[@class='name']/text()").toString();
         String companyName = page.getHtml().xpath("//h2[@class='fl']/text()").toString();
-        String advantage = page.getHtml().xpath("//span[@class='advantage']/p/text()").toString();
+        String advantage = page.getHtml().xpath("//dd[@class='job-advantage']/p/text()").toString();
         Date publishDate= DateUtils.retriveLagouDate(page.getHtml().xpath("//p[@class='publish_time']/text()").toString());
-        if (StringUtils.isBlank(jd)) {
+        if (StringUtils.isBlank(companyName) || StringUtils.isBlank(jobName)) {
             page.setSkip(true);
         }
-        log.info(jobName);
-        log.info(salary);
-        log.info(jd);
-        log.info(companyName);
         JobPosition jp = new JobPosition();
         jp.setCompanyname(companyName)
                 .setJobdetail(jd)
@@ -59,6 +57,7 @@ public class LagouProcessor implements PageProcessor {
                 .setJobname(jobName)
                 .setJobatrraction(advantage)
                 .setPublishdate(publishDate);
+        log.info("Items:"+JSON.toJSONString(jp));
         page.putField("jp", jp);
     }
 
@@ -75,6 +74,7 @@ public class LagouProcessor implements PageProcessor {
             String posititonId = position.get("positionId").toString();
             urls.add(JOB_URL_PREFIEX + posititonId + JOB_URL_POSTFIEX);
         }
+        log.info("urlListSize:"+urls.size());
         page.addTargetRequests(urls);
     }
 
