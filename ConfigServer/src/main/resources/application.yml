@@ -1,0 +1,41 @@
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:LostPanda/ConfigRepo.git
+          ignoreLocalSshSettings: true
+          hostKey: someHostKey
+          hostKeyAlgorithm: ssh-rsa
+          privateKey: |
+                      -----BEGIN RSA PRIVATE KEY-----
+                      MIIEowIBAAKCAQEAxU1PibcmO67AHk51kqaMV2SdtE5qP8o5ZaBGwSr2XzH/aFuw
+                      +qzPy1qV59MTuOa4jwsjrcp8dCeze/eTjUJvAQmmvdqhX8z0YGHu6sdRPi2YHI1Y
+                      7Bu/zmpfC3ez7dTwFWYBK7V3mhXdaBUKLTXt1tGsO1WqARhNX8gkQnSA9eCFPUdE
+                      3uUTjr2VnbNEx5L+kni8nl1vZGs70jWrFfmdQOvoeyqBMwTX2W5gqW/eaBL0bgXa
+                      aIajfm6cbtsCyATXJu7sJ+LfZI0t1pUB/iC1Y0jY9nP+nM5Z1x0XG9NMfiaSpfg5
+                      bx6p2iN06tlBbE95yLhC+b3gC8NQLwMalRqxfQIDAQABAoIBAE8T9GwS7wz+tluv
+                      QKpdfGROnHK29xjIGYck3Rbw/DwdUuvlzCI8fzBXBzwaOo5iUthqM4ulW4pGm0Z1
+                      bTsxxEHbN2xio0k9YTj8J4EMEADmz0+qS1ieqpq1wZBcEs6hCPTapF97ZQtp9gqQ
+                      XDrQoZn3AZvqcq/rqJ9aHUZRYZqqBRySypal507AqwUZKR0KPXB44sH0996lEfgI
+                      KfYfRAxu2OjkpD7juoNhEPQO28Obk7pOJ7BgyIQlhcDMg1jzMzYZz6icpuvjD0Tt
+                      JefseTMhzEDKLVLt28MqZVncQ8pRrSHXScw2XxuXtQVg4BxpdAjOxeR2fbTacxVY
+                      M4hmr5UCgYEA6DzzF9dcPJIDj8eT37zc5gkVYU6OK+SYlmSAPLnm6nscjP744Zyd
+                      qIbfwMcVVcDt/qFvo5tR9d2NKoq3fm8LiZ2uGkC+JAnRx5eY0+xrd9nsHeAgaMaN
+                      pVptCY5zkcdBqkzuDAULF2AlGcs8YRD3sxP3ixL3LmsaII2PWf++xT8CgYEA2X1G
+                      PMjX0AgotgwxK2HT9n8X1QgtvmaouO3vu23FCjyilKD9WBhMhoKAjEicejlj/BYm
+                      uBZ2XiZhxblF3tXVy98bKdjpRBEovTDb5JLH/ZixXKbdw5L+TF6cG4GQwWd/hkwc
+                      xETVx2rjk9hDSSdLGhnDUFFk9+czj7WdLxuUbkMCgYEAyER/ESkrJiR4I83kTAVu
+                      rIRaxo3adilsGAzUtQlPAxdlOIVLlCrdng2o+HH1iPyVf4YxYnG3TQFgEbaLo+EY
+                      nvS1xXfdP/Cj0a1+Igp3ZmQrhFvZNuE6FsSS0LHiIW0lyDkM8pqKxP6pH8Qt7jqW
+                      j/wA9RJGy+WaI0ZPvzmWhjsCgYAHaQ5QmeNIkk6YzVeLi9zGBFSSjKHKYAMVsf2+
+                      HCJfk+tSNx4Kt2E8IAwzO3Ihc/0lJLgTA6jq0lH4g7SOwCh1ttddGKfyCsehkp2b
+                      byjjSiWY65KYzFRf08Vr5oFBJb6hm8xLH7FNByZT7kV0o6Mac5BFF1DiZX1LQzvk
+                      1AK9swKBgFsBQoQvQqW9lOiqIUP7yoMGUi3mfCwRb23BVlCQ8rwx3GTLP0tCdSxC
+                      xIYQB3fHRzqmNj+gn15chdbAhiYNvPMciOP3OXToGXMFkePRcPCzPrgrLFuP1ru3
+                      Wb4Z0bFDb0YiZSqyc3V/Z17jh3ws9ZP7fbTPh384R3bA6Dk52Fsz
+                      -----END RSA PRIVATE KEY-----
+
+server:
+  port: 8888

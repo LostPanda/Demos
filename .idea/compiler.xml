@@ -7,13 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MockitoDemo" />
-        <module name="NioDemo" />
-        <module name="SpringDataDemo" />
-        <module name="SpringDemo" />
-        <module name="VelocityDemo" />
-        <module name="WebmagicDemo" />
+        <module name="ConfigServer" />
+        <module name="EurekaServer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Lombok" target="1.7" />
+      <module name="MockitoDemo" target="1.7" />
+      <module name="NioDemo" target="1.7" />
+      <module name="SpringDataDemo" target="1.7" />
+      <module name="SpringDemo" target="1.7" />
+      <module name="VelocityDemo" target="1.7" />
+      <module name="WebmagicDemo" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
