@@ -12,11 +12,12 @@
         <module>SpringDemo</module>
         <module>VelocityDemo</module>
         <module>MockitoDemo</module>
-        <module>MockitoDemo</module>
         <module>NioDemo</module>
         <module>Lombok</module>
         <module>SpringDataDemo</module>
         <module>WebmagicDemo</module>
+        <module>SpringConfigClient</module>
+        <module>SpringConfigServer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

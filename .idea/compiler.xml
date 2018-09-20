@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MockitoDemo" />
         <module name="NioDemo" />
+        <module name="SpringConfigClient" />
+        <module name="SpringConfigServer" />
         <module name="SpringDataDemo" />
         <module name="SpringDemo" />
         <module name="VelocityDemo" />
